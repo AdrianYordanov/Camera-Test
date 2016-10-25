@@ -29,77 +29,123 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CameraTest));
-            this.streamShow = new System.Windows.Forms.PictureBox();
             this.captureShow = new System.Windows.Forms.PictureBox();
-            this.captureButton = new System.Windows.Forms.Button();
+            this.DeviceOptions = new System.Windows.Forms.Label();
+            this.CameraOptions = new System.Windows.Forms.Label();
+            this.SelectDeviceButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.streamShow)).BeginInit();
+            this.captureButton = new System.Windows.Forms.Button();
+            this.devicesBox = new System.Windows.Forms.ComboBox();
+            this.streamShow = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.captureShow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.streamShow)).BeginInit();
             this.SuspendLayout();
-            // 
-            // streamShow
-            // 
-            this.streamShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.streamShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.streamShow.Location = new System.Drawing.Point(330, 36);
-            this.streamShow.Name = "streamShow";
-            this.streamShow.Size = new System.Drawing.Size(254, 253);
-            this.streamShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.streamShow.TabIndex = 0;
-            this.streamShow.TabStop = false;
             // 
             // captureShow
             // 
-            this.captureShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.captureShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.captureShow.Location = new System.Drawing.Point(12, 194);
+            this.captureShow.BackColor = System.Drawing.Color.White;
+            this.captureShow.Location = new System.Drawing.Point(617, 226);
             this.captureShow.Name = "captureShow";
-            this.captureShow.Size = new System.Drawing.Size(111, 95);
-            this.captureShow.TabIndex = 1;
+            this.captureShow.Size = new System.Drawing.Size(152, 130);
+            this.captureShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.captureShow.TabIndex = 16;
             this.captureShow.TabStop = false;
             // 
-            // captureButton
+            // DeviceOptions
             // 
-            this.captureButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.captureButton.BackColor = System.Drawing.Color.White;
-            this.captureButton.Enabled = false;
-            this.captureButton.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.captureButton.Location = new System.Drawing.Point(129, 194);
-            this.captureButton.Name = "captureButton";
-            this.captureButton.Size = new System.Drawing.Size(195, 47);
-            this.captureButton.TabIndex = 3;
-            this.captureButton.Text = "Capture Image";
-            this.captureButton.UseVisualStyleBackColor = false;
+            this.DeviceOptions.AutoSize = true;
+            this.DeviceOptions.Font = new System.Drawing.Font("Consolas", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeviceOptions.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.DeviceOptions.Location = new System.Drawing.Point(409, 12);
+            this.DeviceOptions.Name = "DeviceOptions";
+            this.DeviceOptions.Size = new System.Drawing.Size(303, 41);
+            this.DeviceOptions.TabIndex = 15;
+            this.DeviceOptions.Text = "Device Options:";
+            // 
+            // CameraOptions
+            // 
+            this.CameraOptions.AutoSize = true;
+            this.CameraOptions.Font = new System.Drawing.Font("Consolas", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CameraOptions.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.CameraOptions.Location = new System.Drawing.Point(409, 161);
+            this.CameraOptions.Name = "CameraOptions";
+            this.CameraOptions.Size = new System.Drawing.Size(303, 41);
+            this.CameraOptions.TabIndex = 14;
+            this.CameraOptions.Text = "Camera Options:";
+            // 
+            // SelectDeviceButton
+            // 
+            this.SelectDeviceButton.BackColor = System.Drawing.Color.White;
+            this.SelectDeviceButton.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectDeviceButton.Location = new System.Drawing.Point(407, 98);
+            this.SelectDeviceButton.Name = "SelectDeviceButton";
+            this.SelectDeviceButton.Size = new System.Drawing.Size(362, 46);
+            this.SelectDeviceButton.TabIndex = 13;
+            this.SelectDeviceButton.Text = "Select Device";
+            this.SelectDeviceButton.UseVisualStyleBackColor = false;
             // 
             // saveButton
             // 
-            this.saveButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.saveButton.BackColor = System.Drawing.Color.White;
             this.saveButton.Enabled = false;
             this.saveButton.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(129, 243);
+            this.saveButton.Location = new System.Drawing.Point(407, 310);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(195, 46);
-            this.saveButton.TabIndex = 5;
+            this.saveButton.Size = new System.Drawing.Size(191, 46);
+            this.saveButton.TabIndex = 12;
             this.saveButton.Text = "Save Image";
             this.saveButton.UseVisualStyleBackColor = false;
+            // 
+            // captureButton
+            // 
+            this.captureButton.BackColor = System.Drawing.Color.White;
+            this.captureButton.Enabled = false;
+            this.captureButton.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.captureButton.Location = new System.Drawing.Point(407, 226);
+            this.captureButton.Name = "captureButton";
+            this.captureButton.Size = new System.Drawing.Size(191, 46);
+            this.captureButton.TabIndex = 11;
+            this.captureButton.Text = "Capture Image";
+            this.captureButton.UseVisualStyleBackColor = false;
+            // 
+            // devicesBox
+            // 
+            this.devicesBox.FormattingEnabled = true;
+            this.devicesBox.Location = new System.Drawing.Point(407, 56);
+            this.devicesBox.Name = "devicesBox";
+            this.devicesBox.Size = new System.Drawing.Size(362, 21);
+            this.devicesBox.TabIndex = 10;
+            // 
+            // streamShow
+            // 
+            this.streamShow.BackColor = System.Drawing.Color.White;
+            this.streamShow.Location = new System.Drawing.Point(12, 12);
+            this.streamShow.Name = "streamShow";
+            this.streamShow.Size = new System.Drawing.Size(382, 358);
+            this.streamShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.streamShow.TabIndex = 9;
+            this.streamShow.TabStop = false;
             // 
             // CameraTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(596, 295);
+            this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.ClientSize = new System.Drawing.Size(781, 385);
+            this.Controls.Add(this.captureShow);
+            this.Controls.Add(this.DeviceOptions);
+            this.Controls.Add(this.CameraOptions);
+            this.Controls.Add(this.SelectDeviceButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.captureButton);
-            this.Controls.Add(this.captureShow);
+            this.Controls.Add(this.devicesBox);
             this.Controls.Add(this.streamShow);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CameraTest";
             this.Text = "Camera Test";
-            ((System.ComponentModel.ISupportInitialize)(this.streamShow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.captureShow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.streamShow)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,10 +153,15 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox streamShow;
         private System.Windows.Forms.PictureBox captureShow;
-        private System.Windows.Forms.Button captureButton;
+        private System.Windows.Forms.Label DeviceOptions;
+        private System.Windows.Forms.Label CameraOptions;
+        private System.Windows.Forms.Button SelectDeviceButton;
         private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button captureButton;
+        private System.Windows.Forms.ComboBox devicesBox;
+        private System.Windows.Forms.PictureBox streamShow;
+
     }
 }
 

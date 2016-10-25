@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Camera_Test
 {
-    public partial class Form1 : Form
+    public partial class CameraTest : Form
     {
-        public Form1()
+        public CameraTest()
         {
             InitializeComponent();
         }

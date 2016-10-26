@@ -83,6 +83,7 @@
             this.SelectDeviceButton.TabIndex = 13;
             this.SelectDeviceButton.Text = "Select Device";
             this.SelectDeviceButton.UseVisualStyleBackColor = false;
+            this.SelectDeviceButton.Click += new System.EventHandler(this.SelectDeviceButton_Click);
             // 
             // saveButton
             // 
@@ -144,6 +145,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CameraTest";
             this.Text = "Camera Test";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CameraTest_FormClosing);
             this.Load += new System.EventHandler(this.CameraTest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.captureShow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.streamShow)).EndInit();

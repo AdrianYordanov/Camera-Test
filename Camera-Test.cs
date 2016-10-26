@@ -39,6 +39,27 @@
             this.InitializateCameraDevices();
         }
 
+        private void CameraTest_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (this.videoSource.IsRunning)
+            {
+                this.videoSource.Stop();
+            }
+        }
+
+        private void SelectDeviceButton_Click(object sender, EventArgs e)
+        {
+            this.videoSource = new VideoCaptureDevice(this.videoDevices[devicesBox.SelectedIndex].MonikerString);
+            this.videoSource.NewFrame += new NewFrameEventHandler(videoSource_NewFrame);
+            this.videoSource.Start();
+        }
+        
+        private void videoSource_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            this.currentImage = (Bitmap)eventArgs.Frame.Clone();
+            streamShow.Image = this.currentImage;
+        }
+
         // Tool functions.
         private void InitializateCameraDevices()
         {
@@ -64,5 +85,6 @@
             string imageFileName = builder.ToString() + ".png";
             return imageFileName;
         }
+
     }
 }

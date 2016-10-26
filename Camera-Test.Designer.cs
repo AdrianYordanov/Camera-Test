@@ -132,7 +132,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(781, 367);
+            this.ClientSize = new System.Drawing.Size(777, 365);
             this.Controls.Add(this.captureShow);
             this.Controls.Add(this.DeviceOptions);
             this.Controls.Add(this.CameraOptions);
@@ -142,7 +142,9 @@
             this.Controls.Add(this.devicesBox);
             this.Controls.Add(this.streamShow);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "CameraTest";
             this.Text = "Camera Test";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CameraTest_FormClosing);

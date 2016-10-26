@@ -21,15 +21,21 @@
 
         public CameraTest()
         {
+            this.videoSource = new VideoCaptureDevice();
+            this.videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+
             InitializeComponent();
         }
 
+        //Event functions.
+        private void CameraTest_Load(object sender, EventArgs e)
+        {
+            this.InitializateCameraDevices();
+        }
 
         // Tool functions.
         private void InitializateCameraDevices()
         {
-            this.videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-
             foreach (FilterInfo device in videoDevices)
             {
                 devicesBox.Items.Add(device.Name);
@@ -37,7 +43,6 @@
 
             // First item is selected by default.
             devicesBox.SelectedIndex = 0;
-            this.videoSource = new VideoCaptureDevice();
         }
 
         private string GenerateImageName(int fileNameLenght = defaultImageFileNameLenght)

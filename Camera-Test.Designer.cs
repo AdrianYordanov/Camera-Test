@@ -144,6 +144,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CameraTest";
             this.Text = "Camera Test";
+            this.Load += new System.EventHandler(this.CameraTest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.captureShow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.streamShow)).EndInit();
             this.ResumeLayout(false);

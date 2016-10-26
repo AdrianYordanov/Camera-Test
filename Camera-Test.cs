@@ -10,17 +10,23 @@
 
     public partial class CameraTest : Form
     {
-        private const int defaultImageFileNameLenght = 10;
-        private readonly Random random = new Random((int)DateTime.Now.Ticks);
-        private const string imagesPath = @"..\..\images\";
+        private readonly string imagesPath;
+        private readonly int defaultImageFileNameLenght;
+        private readonly Random random;
 
-        private VideoCaptureDevice videoSource;
-        private FilterInfoCollection videoDevices;
         private Bitmap currentImage;
         private Bitmap capturedImage;
+        private VideoCaptureDevice videoSource;
+        private FilterInfoCollection videoDevices;
 
         public CameraTest()
         {
+            this.imagesPath = @"..\..\images\";
+            this.defaultImageFileNameLenght = 10;
+            this.random = new Random((int)DateTime.Now.Ticks);
+
+            this.currentImage = null;
+            this.capturedImage = null;
             this.videoSource = new VideoCaptureDevice();
             this.videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
 
@@ -45,11 +51,11 @@
             devicesBox.SelectedIndex = 0;
         }
 
-        private string GenerateImageName(int fileNameLenght = defaultImageFileNameLenght)
+        private string GenerateImageName()
         {
             StringBuilder builder = new StringBuilder();
 
-            for (int i = 0; i < fileNameLenght; i++)
+            for (int i = 0; i < this.defaultImageFileNameLenght; i++)
             {
                 char ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
                 builder.Append(ch);

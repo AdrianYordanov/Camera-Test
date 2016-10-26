@@ -23,5 +23,23 @@
         {
             InitializeComponent();
         }
+
+
+        #region Tools Functions
+        private void InitializateCameraDevices()
+        {
+            this.videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+
+            foreach (FilterInfo device in videoDevices)
+            {
+                devicesBox.Items.Add(device.Name);
+            }
+
+            // First item is selected by default.
+            devicesBox.SelectedIndex = 0;
+            this.videoSource = new VideoCaptureDevice();
+        }
+
+        #endregion
     }
 }

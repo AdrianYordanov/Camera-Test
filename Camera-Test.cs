@@ -25,7 +25,7 @@
         }
 
 
-        #region Tools Functions
+        // Tool functions.
         private void InitializateCameraDevices()
         {
             this.videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
@@ -53,6 +53,5 @@
             string imageFileName = builder.ToString() + ".png";
             return imageFileName;
         }
-        #endregion
     }
 }

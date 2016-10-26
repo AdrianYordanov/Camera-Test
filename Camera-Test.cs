@@ -40,6 +40,19 @@
             this.videoSource = new VideoCaptureDevice();
         }
 
+        private string GenerateImageName(int fileNameLenght = defaultImageFileNameLenght)
+        {
+            StringBuilder builder = new StringBuilder();
+
+            for (int i = 0; i < fileNameLenght; i++)
+            {
+                char ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
+                builder.Append(ch);
+            }
+
+            string imageFileName = builder.ToString() + ".png";
+            return imageFileName;
+        }
         #endregion
     }
 }

@@ -88,7 +88,6 @@
             // saveButton
             // 
             this.saveButton.BackColor = System.Drawing.Color.White;
-            this.saveButton.Enabled = false;
             this.saveButton.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.Location = new System.Drawing.Point(407, 310);
             this.saveButton.Name = "saveButton";
@@ -96,11 +95,11 @@
             this.saveButton.TabIndex = 12;
             this.saveButton.Text = "Save Image";
             this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // captureButton
             // 
             this.captureButton.BackColor = System.Drawing.Color.White;
-            this.captureButton.Enabled = false;
             this.captureButton.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.captureButton.Location = new System.Drawing.Point(407, 226);
             this.captureButton.Name = "captureButton";
@@ -108,6 +107,7 @@
             this.captureButton.TabIndex = 11;
             this.captureButton.Text = "Capture Image";
             this.captureButton.UseVisualStyleBackColor = false;
+            this.captureButton.Click += new System.EventHandler(this.captureButton_Click);
             // 
             // devicesBox
             // 
@@ -122,7 +122,7 @@
             this.streamShow.BackColor = System.Drawing.Color.White;
             this.streamShow.Location = new System.Drawing.Point(12, 12);
             this.streamShow.Name = "streamShow";
-            this.streamShow.Size = new System.Drawing.Size(382, 358);
+            this.streamShow.Size = new System.Drawing.Size(382, 344);
             this.streamShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.streamShow.TabIndex = 9;
             this.streamShow.TabStop = false;
@@ -132,7 +132,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(781, 385);
+            this.ClientSize = new System.Drawing.Size(781, 367);
             this.Controls.Add(this.captureShow);
             this.Controls.Add(this.DeviceOptions);
             this.Controls.Add(this.CameraOptions);

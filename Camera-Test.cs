@@ -47,17 +47,41 @@
             }
         }
 
+        private void videoSource_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            this.currentImage = (Bitmap)eventArgs.Frame.Clone();
+            streamShow.Image = this.currentImage;
+        }
+
         private void SelectDeviceButton_Click(object sender, EventArgs e)
         {
             this.videoSource = new VideoCaptureDevice(this.videoDevices[devicesBox.SelectedIndex].MonikerString);
             this.videoSource.NewFrame += new NewFrameEventHandler(videoSource_NewFrame);
             this.videoSource.Start();
         }
-        
-        private void videoSource_NewFrame(object sender, NewFrameEventArgs eventArgs)
+
+        private void captureButton_Click(object sender, EventArgs eventArgs)
         {
-            this.currentImage = (Bitmap)eventArgs.Frame.Clone();
-            streamShow.Image = this.currentImage;
+            if (this.videoSource.IsRunning)
+            {
+                this.capturedImage = this.currentImage;
+                captureShow.Image = this.streamShow.Image;
+            }
+            else
+            {
+                captureShow.Image = null;
+                captureShow.Invalidate();
+            }
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            if (captureShow.Image != null)
+            {
+                string randomFileName = GenerateImageName();
+                string path = string.Format("{0}{1}", this.imagesPath, randomFileName);
+                this.capturedImage.Save(path, System.Drawing.Imaging.ImageFormat.Png);
+            }
         }
 
         // Tool functions.
@@ -85,6 +109,5 @@
             string imageFileName = builder.ToString() + ".png";
             return imageFileName;
         }
-
     }
 }

@@ -21,7 +21,7 @@
 
         public CameraTest()
         {
-            this.imagesPath = @"..\..\images\";
+            this.imagesPath = @"..\..\saved images\";
             this.defaultImageFileNameLenght = 10;
             this.random = new Random((int)DateTime.Now.Ticks);
 

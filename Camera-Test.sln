@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2015
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camera-Test", "Camera-Test\Camera-Test.csproj", "{98D2BE67-A6CA-4DC4-B3AA-2DD30FF5425C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camera-Test", "Camera-Test.csproj", "{7E1F7543-6DD4-4A88-AD05-95D7D45E800B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{98D2BE67-A6CA-4DC4-B3AA-2DD30FF5425C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{98D2BE67-A6CA-4DC4-B3AA-2DD30FF5425C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{98D2BE67-A6CA-4DC4-B3AA-2DD30FF5425C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{98D2BE67-A6CA-4DC4-B3AA-2DD30FF5425C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E1F7543-6DD4-4A88-AD05-95D7D45E800B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E1F7543-6DD4-4A88-AD05-95D7D45E800B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E1F7543-6DD4-4A88-AD05-95D7D45E800B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E1F7543-6DD4-4A88-AD05-95D7D45E800B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B65B056D-BBDE-4CB4-BE80-66F6067385E8}
 	EndGlobalSection
 EndGlobal
